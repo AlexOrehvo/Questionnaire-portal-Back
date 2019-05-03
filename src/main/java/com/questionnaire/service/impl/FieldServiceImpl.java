@@ -22,23 +22,21 @@ public class FieldServiceImpl implements FieldService {
 
     @Override
     public List<Field> getAll() {
-        return null;
+        return fieldRepository.findAll();
     }
 
     @Override
     public Field getOneById(Long id) {
-        return null;
+        return fieldRepository.getOne(id);
     }
 
     @Override
     public Field save(Field field) {
-        if (field.getId() == null) {
-            userService.getUserWithAuthorities().ifPresent(field::setUser);
-        }
+
+        userService.getUserWithAuthorities().ifPresent(field::setUser);
 
         System.out.println(field.getUser().getEmail());
-        //return fieldRepository.save(field);
-        return field;
+        return fieldRepository.save(field);
     }
 
     @Override
