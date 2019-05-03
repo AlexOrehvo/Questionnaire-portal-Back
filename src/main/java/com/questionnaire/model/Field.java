@@ -1,5 +1,6 @@
 package com.questionnaire.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.questionnaire.model.enumeration.FieldType;
 import com.questionnaire.model.enumeration.PostgreSQLEnumType;
 import org.hibernate.annotations.Type;
@@ -7,6 +8,7 @@ import org.hibernate.annotations.TypeDef;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
@@ -15,12 +17,12 @@ import java.util.Objects;
         name = "psql_enum",
         typeClass = PostgreSQLEnumType.class
 )
-public class Field {
+public class Field implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "field_id")
-    private long id;
+    private Long id;
 
     @NotNull
     @Column(name = "label")
@@ -33,22 +35,23 @@ public class Field {
     private FieldType type;
 
     @Column(name = "isActive")
-    private boolean isActive = false;
+    private boolean isActive;
 
     @Column(name = "required")
-    private boolean required = false;
+    private boolean required;
 
+    @JsonIgnore
     @ManyToOne
     private User user;
 
     public Field() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
