@@ -3,6 +3,150 @@ Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
 Host: 127.0.0.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTU1Njg4MDQ1NywiZXhwIjoxNTU2OTY2ODU3fQ.Pmv0UdPW5ifCP0hjObGoFXJ4O5S5itP4J4uHKM81kc-n54t4rK5ETIkKSO7A-xTodRNOuPrVNOrGxD8SgeDBhw
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T124805.200.txt
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T124738.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T124427.200.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTU1Njg4MDE1NCwiZXhwIjoxNTU2ODgwMjQwfQ.gdEEKLictWpUAifleuHxJHx2fjvgEbR9FZf2UWXDXu0FlOcKHza_dqpsWeRMcjrvAEB44wSq5iGxVw8vmIfr_w
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T124402.401.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTU1Njg4MDE1NCwiZXhwIjoxNTU2ODgwMjQwfQ.gdEEKLictWpUAifleuHxJHx2fjvgEbR9FZf2UWXDXu0FlOcKHza_dqpsWeRMcjrvAEB44wSq5iGxVw8vmIfr_w
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T124343.200.txt
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T124235.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T124041.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T124005.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T123908.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T123507.500.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE1NTc3MzkzMjB9.A8okw0d2dzHpxrmO8-SzRprwNoOb-ofSTc2_KoTU-sKt_Tx3KfKKNL5Ag2ldDt5q-ForxyJXFMAQzRsa0MR4mQ
 
 {   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
@@ -544,112 +688,6 @@ Content-Type: application/json
 {"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
 
 <> 2019-04-26T112713.200.json
-
-###
-
-POST http://localhost:8080/response
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-###
-
-POST http://localhost:8080/response
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-26T111703.200.txt
-
-###
-
-GET http://localhost:8080/fields
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T020124.200.txt
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T014506.200.txt
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T014130.200.txt
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T013846.500.json
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T013457.200.txt
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-25T013002.500.json
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-###
-
-POST http://localhost:8080/account/register1
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
-
-<> 2019-04-24T124608.500.json
 
 ###
 

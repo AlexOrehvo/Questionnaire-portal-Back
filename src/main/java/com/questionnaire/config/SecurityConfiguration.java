@@ -1,5 +1,7 @@
 package com.questionnaire.config;
 
+import com.questionnaire.security.jwt.JwtAuthEntryPoint;
+import com.questionnaire.security.jwt.JwtAuthTokenFilter;
 import com.questionnaire.security.jwt.TokenProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-
-import javax.annotation.PostConstruct;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -23,31 +24,32 @@ import javax.annotation.PostConstruct;
 )
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    private final AuthenticationManagerBuilder authenticationManagerBuilder;
+    private final JwtAuthEntryPoint unauthorizedHandler;
 
     private final UserDetailsService userDetailsService;
 
     private final TokenProvider tokenProvider;
 
-    public SecurityConfiguration(AuthenticationManagerBuilder authenticationManagerBuilder, UserDetailsService userDetailsService, TokenProvider tokenProvider) {
-        this.authenticationManagerBuilder = authenticationManagerBuilder;
+    public SecurityConfiguration(JwtAuthEntryPoint unauthorizedHandler, UserDetailsService userDetailsService, TokenProvider tokenProvider) {
+        this.unauthorizedHandler = unauthorizedHandler;
         this.userDetailsService = userDetailsService;
         this.tokenProvider = tokenProvider;
     }
 
-    @PostConstruct
-    public void init() {
-        try {
-            authenticationManagerBuilder
-                    .userDetailsService(userDetailsService)
-                    .passwordEncoder(passwordEncoder());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    @Bean
+    public JwtAuthTokenFilter authenticationJwtTokenFilter() {
+        return new JwtAuthTokenFilter(tokenProvider, userDetailsService);
     }
 
     @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth
+                .userDetailsService(userDetailsService)
+                .passwordEncoder(passwordEncoder());
+    }
+
     @Bean
+    @Override
     public AuthenticationManager authenticationManagerBean() throws Exception {
         return super.authenticationManagerBean();
     }
@@ -60,19 +62,19 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(HttpSecurity http) throws Exception {
         http
+                    .cors()
+                .and()
                     .csrf()
                     .disable()
-                    .exceptionHandling()
-                .and()
-                    .headers()
-                    .frameOptions()
-                    .disable()
-                .and()
-                    .sessionManagement()
-                    .sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
-                .and()
                     .authorizeRequests()
                     .antMatchers("/account/**").permitAll()
-                    .antMatchers("/api/**").authenticated();
+                    .antMatchers("/api/**").authenticated()
+                .and()
+                    .exceptionHandling().authenticationEntryPoint(unauthorizedHandler)
+                .and()
+                    .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        http
+                .addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 }

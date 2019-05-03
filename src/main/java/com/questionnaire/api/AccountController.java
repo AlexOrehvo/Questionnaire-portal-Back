@@ -3,18 +3,16 @@ package com.questionnaire.api;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.questionnaire.api.VM.LoginVM;
 import com.questionnaire.api.VM.ManagedUserVM;
+import com.questionnaire.message.JwtResponse;
 import com.questionnaire.model.User;
-import com.questionnaire.security.SecurityConstants;
 import com.questionnaire.security.jwt.TokenProvider;
 import com.questionnaire.service.UserService;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -49,18 +47,19 @@ public class AccountController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<JWTToken> authorize(@Valid @RequestBody LoginVM loginVM) {
+    public ResponseEntity<?> authorize(@Valid @RequestBody LoginVM loginVM) {
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(loginVM.getEmail(), loginVM.getPassword());
 
         Authentication authentication = authenticationManager.authenticate(authenticationToken);
+
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        SecurityContext securityContext = SecurityContextHolder.getContext();
+
         boolean rememberMe = (loginVM.isRememberMe() == null) ? false : loginVM.isRememberMe();
-        String jwt = tokenProvider.createToken(authentication, rememberMe);
-        HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add(SecurityConstants.AUTHORIZATION_HEADER, SecurityConstants.TOKEN_PREFIX + jwt);
-        return new ResponseEntity<>(new JWTToken(jwt), httpHeaders, HttpStatus.OK);
+        String jwt = tokenProvider.generateJwtToken(authentication);
+
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        return ResponseEntity.ok(new JwtResponse(jwt));
     }
 
     static class JWTToken {
