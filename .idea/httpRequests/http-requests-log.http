@@ -1,0 +1,655 @@
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE1NTc3MzkzMjB9.A8okw0d2dzHpxrmO8-SzRprwNoOb-ofSTc2_KoTU-sKt_Tx3KfKKNL5Ag2ldDt5q-ForxyJXFMAQzRsa0MR4mQ
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112753.403.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE1NTc3MzkzMjB9.A8okw0d2dzHpxrmO8-SzRprwNoOb-ofSTc2_KoTU-sKt_Tx3KfKKNL5Ag2ldDt5q-ForxyJXFMAQzRsa0MR4mQ
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112721.403.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112643.403.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Host: 127.0.0.1
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112440.403.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE1NTc3MzkzMjB9.A8okw0d2dzHpxrmO8-SzRprwNoOb-ofSTc2_KoTU-sKt_Tx3KfKKNL5Ag2ldDt5q-ForxyJXFMAQzRsa0MR4mQ
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112328.403.json
+
+###
+
+POST http://localhost:8080/api/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbGV4QGdtYWlsLmNvbSIsImF1dGgiOiJST0xFX1VTRVIiLCJleHAiOjE1NTc3MzkzMjB9.A8okw0d2dzHpxrmO8-SzRprwNoOb-ofSTc2_KoTU-sKt_Tx3KfKKNL5Ag2ldDt5q-ForxyJXFMAQzRsa0MR4mQ
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T112237.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T112200.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T112131.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T110955.200.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T110813.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T110808.200.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T110314.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T104938.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T104537.200.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T104517.500.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "false" }
+
+<> 2019-05-03T104418.500.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "fase" }
+
+<> 2019-05-03T104252.400.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T104239.200.json
+
+###
+
+POST http://localhost:8080
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "label": "Sex",   "type": "RADIO_BUTTON",   "isActive": "true", "required": "fase" }
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T100654.200.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T100339.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T100221.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T100037.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T095350.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T094921.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T094448.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-03T094244.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T111032.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T074223.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T073848.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T072610.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T071904.403.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "1234567",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T064221.403.json
+
+###
+
+POST http://localhost:8080/account/register
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T064141.200.txt
+
+###
+
+POST http://localhost:8080/account/register
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+###
+
+POST http://localhost:8080/account/register
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-05-02T063648.200.txt
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-04-26T041904.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-04-26T041824.500.json
+
+###
+
+POST http://localhost:8080/account/authenticate
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "12345678",
+  "rememberMe": "true"
+}
+
+<> 2019-04-26T041711.500.json
+
+###
+
+GET http://localhost:8080/response
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-26T112713.200.json
+
+###
+
+POST http://localhost:8080/response
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+###
+
+POST http://localhost:8080/response
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-26T111703.200.txt
+
+###
+
+GET http://localhost:8080/fields
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T020124.200.txt
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T014506.200.txt
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T014130.200.txt
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T013846.500.json
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T013457.200.txt
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-25T013002.500.json
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+###
+
+POST http://localhost:8080/account/register1
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email": "alex@gmail.com", "password": "12345678", "firstName": "Alex", "lastName": "Orehvo", "phoneNumber": "12345678"}
+
+<> 2019-04-24T124608.500.json
+
+###
+

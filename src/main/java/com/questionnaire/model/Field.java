@@ -20,7 +20,7 @@ public class Field {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "field_id")
-    private long id;
+    private Long id;
 
     @NotNull
     @Column(name = "label")
@@ -44,11 +44,11 @@ public class Field {
     public Field() {
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

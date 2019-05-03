@@ -31,7 +31,7 @@ public class LoginVM {
         this.password = password;
     }
 
-    public Boolean getRememberMe() {
+    public Boolean isRememberMe() {
         return rememberMe;
     }
 
