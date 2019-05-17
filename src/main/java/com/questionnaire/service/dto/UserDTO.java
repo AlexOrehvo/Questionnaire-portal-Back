@@ -1,10 +1,6 @@
 package com.questionnaire.service.dto;
 
-import com.questionnaire.model.Field;
-
 import javax.validation.constraints.Size;
-import java.util.HashSet;
-import java.util.Set;
 
 public class UserDTO {
 
@@ -21,8 +17,6 @@ public class UserDTO {
 
     @Size(max = 8)
     private String phoneNumber;
-
-    private Set<Field> fields = new HashSet<>();
 
     public UserDTO() {}
 
@@ -64,13 +58,5 @@ public class UserDTO {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
-    }
-
-    public Set<Field> getFields() {
-        return fields;
-    }
-
-    public void setFields(Set<Field> fields) {
-        this.fields = fields;
     }
 }

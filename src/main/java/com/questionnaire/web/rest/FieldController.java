@@ -1,4 +1,4 @@
-package com.questionnaire.api;
+package com.questionnaire.web.rest;
 
 import com.questionnaire.model.Field;
 import com.questionnaire.service.FieldService;

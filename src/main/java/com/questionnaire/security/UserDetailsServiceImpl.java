@@ -30,14 +30,12 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     private org.springframework.security.core.userdetails.User createSpringSecurityUser(String lowercaseLogin, User user) {
-        System.out.println(123);
         if (!user.getActivated()) {
             throw new UserNotActivatedException("User " + lowercaseLogin + " was not activated");
         }
         List<GrantedAuthority> grantedAuthorities = new ArrayList<>();
         GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_USER");
         grantedAuthorities.add(authority);
-        System.out.println(user.getEmail() + " -------------- " + user.getPassword());
         return new org.springframework.security.core.userdetails.User(user.getEmail(),
                 user.getPassword(),
                 grantedAuthorities);

@@ -8,5 +8,7 @@ public interface ResponseService {
 
     List<Response> getAll();
 
-    void saveResponse(Response response);
+    Response saveResponse(Response response);
+
+    void deleteResponse(Long id);
 }
