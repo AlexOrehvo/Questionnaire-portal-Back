@@ -9,7 +9,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -36,7 +35,7 @@ public class Field implements Serializable {
     private FieldType type;
 
     @Column(name = "isActive")
-    private boolean isActive;
+    private boolean active;
 
     @Column(name = "required")
     private boolean required;
@@ -72,11 +71,11 @@ public class Field implements Serializable {
     }
 
     public boolean isActive() {
-        return isActive;
+        return active;
     }
 
-    public void setActive(boolean active) {
-        isActive = active;
+    public void isActive(boolean active) {
+        active = active;
     }
 
     public boolean isRequired() {
@@ -93,33 +92,5 @@ public class Field implements Serializable {
 
     public void setOptions(Set<String> options) {
         this.options = options;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Field field = (Field) o;
-        return getId() == field.getId() &&
-                isActive() == field.isActive() &&
-                isRequired() == field.isRequired() &&
-                getLabel().equals(field.getLabel()) &&
-                getType() == field.getType();
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId(), getLabel(), getType(), isActive(), isRequired());
-    }
-
-    @Override
-    public String toString() {
-        return "Field{" +
-                "id=" + id +
-                ", label='" + label + '\'' +
-                ", type=" + type +
-                ", isActive=" + isActive +
-                ", required=" + required +
-                '}';
     }
 }
