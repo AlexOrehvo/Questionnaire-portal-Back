@@ -1,4 +1,4 @@
-package com.questionnaire.api.VM;
+package com.questionnaire.web.rest.VM;
 
 import javax.validation.constraints.NotNull;
 

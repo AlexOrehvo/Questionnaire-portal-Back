@@ -1,6 +1,5 @@
 package com.questionnaire.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.questionnaire.model.enumeration.FieldType;
 import com.questionnaire.model.enumeration.PostgreSQLEnumType;
 import org.hibernate.annotations.Type;
@@ -9,7 +8,9 @@ import org.hibernate.annotations.TypeDef;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "field")
@@ -40,9 +41,8 @@ public class Field implements Serializable {
     @Column(name = "required")
     private boolean required;
 
-    @JsonIgnore
-    @ManyToOne
-    private User user;
+    @ElementCollection
+    private Set<String> options = new HashSet<>();
 
     public Field() {
     }
@@ -87,12 +87,12 @@ public class Field implements Serializable {
         this.required = required;
     }
 
-    public User getUser() {
-        return user;
+    public Set<String> getOptions() {
+        return options;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setOptions(Set<String> options) {
+        this.options = options;
     }
 
     @Override

@@ -32,15 +32,11 @@ public class FieldServiceImpl implements FieldService {
 
     @Override
     public Field save(Field field) {
-
-        userService.getUserWithAuthorities().ifPresent(field::setUser);
-
-        System.out.println(field.getUser().getEmail());
         return fieldRepository.save(field);
     }
 
     @Override
     public void delete(Long id) {
-
+        fieldRepository.deleteById(id);
     }
 }

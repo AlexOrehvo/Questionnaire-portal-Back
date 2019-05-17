@@ -1,7 +1,5 @@
 package com.questionnaire.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashMap;
@@ -20,13 +18,9 @@ public class Response implements Serializable {
             name = "answers"
     )
     @MapKeyColumn(name = "field_id")
-    @MapKeyClass(Field.class)
+    @MapKeyClass(Long.class)
     @Column(name = "value")
-    private Map<Field, String> map = new HashMap<Field, String>();
-
-    @JsonIgnore
-    @ManyToOne
-    private User user;
+    private Map<Long, String> map = new HashMap<>();
 
     public Response() {
     }
@@ -39,20 +33,12 @@ public class Response implements Serializable {
         this.id = id;
     }
 
-    public Map<Field, String> getMap() {
+    public Map<Long, String> getMap() {
         return map;
     }
 
-    public void setMap(Map<Field, String> map) {
+    public void setMap(Map<Long, String> map) {
         this.map = map;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override
@@ -60,7 +46,6 @@ public class Response implements Serializable {
         return "Response{" +
                 "id=" + id +
                 ", map=" + map.toString() +
-                ", user=" + user.toString() +
                 '}';
     }
 }

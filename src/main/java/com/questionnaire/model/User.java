@@ -1,11 +1,11 @@
 package com.questionnaire.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @Table(name = "`user`")
@@ -28,17 +28,21 @@ public class User implements Serializable {
 
     @NotNull
     @Column(name = "activated", nullable = false)
+    @JsonIgnore
     private Boolean activated = false;
 
     @NotNull
+    @JsonIgnore
     @Column(name = "password_hash", nullable = false)
     private String password;
 
     @Column(name = "phone_number")
     private String phoneNumber;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private Set<Field> fields = new HashSet<>();
+    @Size(max = 20)
+    @Column(name = "activation_key", length = 20)
+    @JsonIgnore
+    private String activationKey;
 
     public User() {
     }
@@ -99,11 +103,11 @@ public class User implements Serializable {
         this.activated = activated;
     }
 
-    public Set<Field> getFields() {
-        return fields;
+    public String getActivationKey() {
+        return activationKey;
     }
 
-    public void setFields(Set<Field> fields) {
-        this.fields = fields;
+    public void setActivationKey(String activationKey) {
+        this.activationKey = activationKey;
     }
 }
